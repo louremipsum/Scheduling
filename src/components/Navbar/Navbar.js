@@ -18,7 +18,7 @@ function Navbar() {
 
   const { classes } = useStyles();
   return (
-    <Group dir="row" m={4} p={4} mb={120} className={classes.nav}>
+    <Group dir="row" m={0} p={8} mb={120} className={classes.nav}>
       <Logo />
       <Navlink />
       <Log />
