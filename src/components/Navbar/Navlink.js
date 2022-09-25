@@ -4,8 +4,8 @@ import { Button } from "@mantine/core";
 function navlink() {
   return (
     <Button.Group>
-      <Button variant="default">About</Button>
-      <Button variant="default">Contact</Button>
+      <Button variant="subtle">About</Button>
+      <Button variant="subtle">Contact</Button>
     </Button.Group>
   );
 }

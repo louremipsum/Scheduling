@@ -10,7 +10,7 @@ function Logo() {
         component="span"
         align="center"
         variant="gradient"
-        gradient={{ from: "indigo", to: "cyan", deg: 45 }}
+        gradient={{ from: "#261821", to: "#8C5A61", deg: 45 }}
         size="xl"
         weight={700}
         style={{ fontFamily: "Greycliff CF, sans-serif" }}

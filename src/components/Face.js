@@ -18,7 +18,7 @@ function Face() {
   return (
     <Group>
       <BackgroundImage
-        src="https://user-images.githubusercontent.com/72456774/192101787-06378f1a-84e0-4439-a9ac-6276b533df46.jpg"
+        src="https://user-images.githubusercontent.com/72456774/192104661-20f08b78-a648-4cde-a65e-89e1436ccb4a.png"
         className={classes.bg}
       >
         <Navbar />
