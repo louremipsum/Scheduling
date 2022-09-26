@@ -10,7 +10,6 @@ function Navbar() {
       display: "flex",
       alignItems: "center",
       justifyContent: "space-around",
-      width: "100vw",
       background: "rgba(255, 255, 255, 0.8)",
       backdropFilter: "saturate(180%) blur(10px)",
     },
