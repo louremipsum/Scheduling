@@ -12,16 +12,19 @@ function Navbar() {
       justifyContent: "space-around",
       background: "rgba(255, 255, 255, 0.8)",
       backdropFilter: "saturate(180%) blur(10px)",
+      flexDirection: "row",
+      margin: "0 0 120px 0",
+      padding: "8px",
     },
   }));
 
   const { classes } = useStyles();
   return (
-    <Group dir="row" m={0} p={8} mb={120} className={classes.nav}>
+    <div className={classes.nav}>
       <Logo />
       <Navlink />
       <Log />
-    </Group>
+    </div>
   );
 }
 

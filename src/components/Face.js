@@ -10,25 +10,21 @@ function Face() {
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
-      // height: "100vh",
+      height: "100vh",
     },
   }));
 
   const { classes } = useStyles();
   return (
     <>
-      <Grid>
-        <Grid.Col>
-          <BackgroundImage
-            src="https://user-images.githubusercontent.com/72456774/192104661-20f08b78-a648-4cde-a65e-89e1436ccb4a.png"
-            className={classes.bg}
-          >
-            <Navbar />
-            <Landing />
-          </BackgroundImage>
-        </Grid.Col>
-        <Grid.Col>{/* <Section1 /> */}</Grid.Col>
-      </Grid>
+      <BackgroundImage
+        src="https://user-images.githubusercontent.com/72456774/192104661-20f08b78-a648-4cde-a65e-89e1436ccb4a.png"
+        className={classes.bg}
+      >
+        <Navbar />
+        <Landing />
+      </BackgroundImage>
+      <Section1 />
     </>
   );
 }
