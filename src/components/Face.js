@@ -1,8 +1,9 @@
-import { BackgroundImage, createStyles, Grid, Group } from "@mantine/core";
+import { BackgroundImage, createStyles } from "@mantine/core";
 import React from "react";
 import Navbar from "./Navbar/Navbar.js";
 import Landing from "./Navbar/Landing.js";
 import Section1 from "./home/Section1";
+import Section2 from "./home/Section2.js";
 
 function Face() {
   const useStyles = createStyles((_params) => ({
@@ -25,6 +26,7 @@ function Face() {
         <Landing />
       </BackgroundImage>
       <Section1 />
+      <Section2 />
     </>
   );
 }
