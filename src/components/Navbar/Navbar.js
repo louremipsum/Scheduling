@@ -1,4 +1,4 @@
-import { createStyles, Group } from "@mantine/core";
+import { createStyles } from "@mantine/core";
 import React from "react";
 import Logo from "./Logo.js";
 import Navlink from "./Navlink";
@@ -15,6 +15,9 @@ function Navbar() {
       flexDirection: "row",
       margin: "0 0 120px 0",
       padding: "8px",
+      position: "sticky",
+      top: 0,
+      zIndex: 1,
     },
   }));
 

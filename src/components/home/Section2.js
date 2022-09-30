@@ -49,13 +49,16 @@ function Section2() {
       margin: "2rem",
     },
     color: {
-      display: "flex",
+      /*       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
+      flexDirection: "row", */
       padding: "1rem",
       margin: "1rem",
       width: "22rem",
-      // backgroundImage: gradient({ currentColor1 }, { currentColor2 }
+      borderRadius: "8px",
+      background:
+        "linear-gradient(90deg, rgba(103,255,192,1) 34%, rgba(144,152,228,1) 81%);",
     },
   }));
 
@@ -113,11 +116,13 @@ function Section2() {
           placeholder="Pick color 1"
           value={currentColor1}
           onChange={setColor1}
+          mb={8}
         />
         <ColorInput
           placeholder="Pick color 2"
           value={currentColor2}
           onChange={setColor2}
+          mb={8}
         />
       </div>
     </SimpleGrid>
