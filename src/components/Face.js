@@ -5,6 +5,7 @@ import Landing from "./Navbar/Landing.js";
 import Section1 from "./home/Section1";
 import Section2 from "./home/Section2.js";
 import Section3 from "./home/Section3.js";
+import Section4 from "./home/Section4.js";
 
 function Face() {
   const useStyles = createStyles((_params) => ({
@@ -29,6 +30,7 @@ function Face() {
       <Section1 />
       <Section2 />
       <Section3 />
+      <Section4 />
     </>
   );
 }

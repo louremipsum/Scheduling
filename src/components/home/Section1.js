@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Image, createStyles, SimpleGrid, Stack } from "@mantine/core";
+import { Text, createStyles, SimpleGrid, Stack } from "@mantine/core";
 
 function Section1() {
   const useStyles = createStyles(() => ({
