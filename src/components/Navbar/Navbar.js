@@ -13,7 +13,7 @@ function Navbar() {
       background: "rgba(255, 255, 255, 0.8)",
       backdropFilter: "saturate(180%) blur(10px)",
       flexDirection: "row",
-      margin: "0 0 120px 0",
+      marginBottom: "0.5rem",
       padding: "8px",
       position: "sticky",
       top: 0,

@@ -20,11 +20,11 @@ function Face() {
   const { classes } = useStyles();
   return (
     <>
+      <Navbar />
       <BackgroundImage
         src="https://user-images.githubusercontent.com/72456774/192104661-20f08b78-a648-4cde-a65e-89e1436ccb4a.png"
         className={classes.bg}
       >
-        <Navbar />
         <Landing />
       </BackgroundImage>
       <Section1 />

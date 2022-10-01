@@ -15,13 +15,16 @@ import {
   HiAnnotation,
   HiClipboardCopy,
   HiClipboardCheck,
+  HiTrash,
 } from "react-icons/hi";
+import getContrastGradient from "../YIQ";
 
 function Section2() {
   const [currentText, setText] = useState("");
-  const [currentColor1, setColor1] = useState("");
-  const [currentColor2, setColor2] = useState("");
+  const [currentColor1, setColor1] = useState("#FFFFFF");
+  const [currentColor2, setColor2] = useState("#FFFFFF");
   //   const data = value.trim().length > 0 ? value : [];
+  const textColor = getContrastGradient(currentColor1, currentColor2);
 
   const useStyles = createStyles(() => ({
     box: {
@@ -57,8 +60,7 @@ function Section2() {
       margin: "1rem",
       width: "22rem",
       borderRadius: "8px",
-      background:
-        "linear-gradient(90deg, rgba(103,255,192,1) 34%, rgba(144,152,228,1) 81%);",
+      background: `linear-gradient(90deg, ${currentColor1} 34%, ${currentColor2} 81%);`,
     },
   }));
 
@@ -105,11 +107,26 @@ function Section2() {
                 </Tooltip>
               )}
             </CopyButton>
+            <Tooltip
+              label={currentText === "" ? "Empty" : "Delete"}
+              withArrow
+              position="right"
+            >
+              <ActionIcon
+                color={currentText === "" ? "gray" : "violet"}
+                onClick={function empty() {
+                  setText("");
+                }}
+              >
+                <HiTrash size={20} />
+              </ActionIcon>
+            </Tooltip>
           </Paper>
         </Stack>
       </div>
+      {/* ----------------------------------------------- */}
       <div className={classes.color}>
-        <Text mb={8} size="md" weight="500">
+        <Text mb={8} size="md" weight="500" color={textColor}>
           Also, can you tell me about your favourite color?
         </Text>
         <ColorInput

@@ -22,21 +22,20 @@ function Landing() {
   }));
   const { classes } = useStyles();
   return (
-    <Group spacing="sm">
+    <Group spacing="lg" m="md">
       <div>
+        <Image
+          src="https://user-images.githubusercontent.com/72456774/192103729-9470f9cd-a4c4-44a9-887c-006fbf5bb6bf.png"
+          alt="demo"
+          width={350}
+          height={350}
+        />
         <Text className={classes.main}>Uhh, Can all the mikes stand up?</Text>
         <Text className={classes.sub}>That concludes the mic check.</Text>
         <Button variant="solid" m="2.5rem 5rem" size="md">
           Go Ahead
         </Button>
       </div>
-
-      <Image
-        src="https://user-images.githubusercontent.com/72456774/192103729-9470f9cd-a4c4-44a9-887c-006fbf5bb6bf.png"
-        alt="demo"
-        width={350}
-        height={350}
-      />
     </Group>
   );
 }
