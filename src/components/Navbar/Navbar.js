@@ -22,9 +22,11 @@ function Navbar() {
   }));
 
   const { classes } = useStyles();
+  const color = [5, 8];
+
   return (
     <div className={classes.nav}>
-      <Logo />
+      <Logo {...color} />
       <Navlink />
       <Log />
     </div>
