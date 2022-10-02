@@ -1,11 +1,12 @@
 import { BackgroundImage, createStyles } from "@mantine/core";
 import React from "react";
 import Navbar from "./Navbar/Navbar.js";
-import Landing from "./Navbar/Landing.js";
+import Landing from "./Landing.js";
 import Section1 from "./home/Section1";
 import Section2 from "./home/Section2.js";
 import Section3 from "./home/Section3.js";
 import Section4 from "./home/Section4.js";
+import Footer from "./Footer/Footer.js";
 
 function Face() {
   const useStyles = createStyles((_params) => ({
@@ -31,6 +32,7 @@ function Face() {
       <Section2 />
       <Section3 />
       <Section4 />
+      <Footer />
     </>
   );
 }
