@@ -2,12 +2,14 @@ import React from "react";
 import { createStyles, Group, Text } from "@mantine/core";
 import { ReactComponent as YourSvg } from "./logoimg.svg";
 
-function Logo() {
+function Logo(c) {
   const useStyles = createStyles((theme) => ({
     txt: {
-      background: `-webkit-linear-gradient(${theme.colors.primary[5]}, ${theme.colors.primary[8]})`,
-      "-webkit-background-clip": "text",
-      "-webkit-text-fill-color": "transparent",
+      background: `-webkit-linear-gradient(${theme.colors.primary[c.c1]}, ${
+        theme.colors.primary[c.c2]
+      })`,
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
     },
   }));
 
