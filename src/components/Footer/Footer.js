@@ -4,10 +4,15 @@ import Logo from "../Navbar/Logo";
 import FooterObj from "./FooterObj";
 
 function Footer() {
+  const color = {
+    c1: 2,
+    c2: 5,
+  };
+
   const useStyles = createStyles((theme) => ({
     main: {
       minWidth: "20rem",
-      backgroundColor: theme.colors.primary[7],
+      backgroundColor: theme.colors.primary[8],
       padding: "2rem",
     },
     footlink: {
@@ -36,17 +41,19 @@ function Footer() {
   const { classes } = useStyles();
 
   return (
-    <Group position="apart" className={classes.main}>
-      <Logo />
-      <Group position="right" className={classes.grplink}>
-        {datafoot.map((item) => (
-          <FooterObj {...item} key={UID()} className={classes.footlink} />
-        ))}
-        {/* {datafoot.map((item) => (
+    <footer>
+      <Group position="apart" className={classes.main}>
+        <Logo {...color}/>
+        <Group position="right" className={classes.grplink}>
+          {datafoot.map((item) => (
+            <FooterObj {...item} key={UID()} className={classes.footlink} />
+          ))}
+          {/* {datafoot.map((item) => (
           <FooterObj {...item} key={UID()} className={classes.footlink} />
         ))} */}
+        </Group>
       </Group>
-    </Group>
+    </footer>
   );
 }
 

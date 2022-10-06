@@ -22,14 +22,17 @@ function Navbar() {
   }));
 
   const { classes } = useStyles();
-  const color = [5, 8];
+  const color = {
+    c1: 5,
+    c2: 8,
+  };
 
   return (
-    <div className={classes.nav}>
+    <header className={classes.nav}>
       <Logo {...color} />
       <Navlink />
       <Log />
-    </div>
+    </header>
   );
 }
 

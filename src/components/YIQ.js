@@ -25,12 +25,10 @@ const getContrast = (hex1) => {
 };
 
 const getContrastGradient = (hex1, hex2) => {
-  const hex1_c = getContrast(hex1);
-  const hex2_c = getContrast(hex2);
-  if (hex1_c === "black" && hex2_c === "black") {
+  if (getContrast(hex1) === "black" && getContrast(hex2) === "black") {
     return "dark";
   }
-  if (hex1_c === "white" && hex2_c === "white") {
+  if (getContrast(hex1) === "white" && getContrast(hex2) === "white") {
     return "white";
   }
   return "gray";

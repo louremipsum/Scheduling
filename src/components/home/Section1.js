@@ -1,5 +1,12 @@
 import React from "react";
-import { Text, createStyles, SimpleGrid, Stack } from "@mantine/core";
+import {
+  Text,
+  createStyles,
+  SimpleGrid,
+  Stack,
+  Highlight,
+  Mark,
+} from "@mantine/core";
 
 function Section1() {
   const useStyles = createStyles(() => ({
@@ -18,15 +25,21 @@ function Section1() {
     <SimpleGrid cols={1}>
       <div className={classes.head}>
         <Stack>
-          <Text size="lg" weight="700" align="center">
+          <Text size="xl" weight="700" align="center">
             So... Why this website?
           </Text>
-          <Text size="md" weight="500" align="center">
-            This website is mainly my imagination running free to learn the
-            recent thing which i came to know about that is{" "}
-            <Text variant="link" component="a" href="https://mantine.dev">
+          <Text size="lg" weight="500" align="center">
+            This website is mainly my <Mark color={"teal"}>imagination</Mark>{" "}
+            running free to learn the recent thing which i came to know about
+            that is{" "}
+            <Highlight
+              variant="link"
+              component="a"
+              href="https://mantine.dev"
+              highlight={"Mantine"}
+            >
               Mantine
-            </Text>
+            </Highlight>
           </Text>
         </Stack>
       </div>
