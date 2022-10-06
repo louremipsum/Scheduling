@@ -1,5 +1,6 @@
-import { Button, createStyles, Text, Image, Group } from "@mantine/core";
+import { createStyles, Text, Image, Group } from "@mantine/core";
 import React from "react";
+import ClickityBtn from "./MagicBtn/ClickityBtn";
 
 function Landing() {
   const useStyles = createStyles((theme) => ({
@@ -32,9 +33,7 @@ function Landing() {
         />
         <Text className={classes.main}>Uhh, Can all the mikes stand up?</Text>
         <Text className={classes.sub}>That concludes the mic check.</Text>
-        <Button variant="solid" m="2.5rem 5rem" size="md">
-          Go Ahead
-        </Button>
+        <ClickityBtn />
       </div>
     </Group>
   );

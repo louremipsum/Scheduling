@@ -7,10 +7,10 @@ import Section2 from "./home/Section2.js";
 import Section3 from "./home/Section3.js";
 import Section4 from "./home/Section4.js";
 import Footer from "./Footer/Footer.js";
-import ScrollTop from "./ScrollTop.js";
+import ScrollTop from "./MagicBtn/ScrollTop.js";
 
 function Face() {
-  const useStyles = createStyles((_params) => ({
+  const useStyles = createStyles(() => ({
     bg: {
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
@@ -33,8 +33,8 @@ function Face() {
       <Section2 />
       <Section3 />
       <Section4 />
-      <ScrollTop />
       <Footer />
+      <ScrollTop />
     </>
   );
 }
