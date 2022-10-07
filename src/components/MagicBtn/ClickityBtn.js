@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Tooltip, Button } from "@mantine/core";
 import { useCounter } from "@mantine/hooks";
 
@@ -20,10 +20,20 @@ function ClickityBtn() {
   ];
 
   const [count, handlers] = useCounter(0, { min: 0, max: clickTxt.length - 1 });
-  //   setOpened(!opened, 5000);
+  const [timeoutId, setTimeoutId] = useState(null);
+
+  useEffect(() => {
+    if (count > 0) {
+      const t = setTimeout(handlers.reset, 1000);
+      setTimeoutId(t);
+    }
+
+    return () => clearTimeout(timeoutId);
+  }, [count, handlers.reset]);
+
   return (
     <div>
-      {count === 0 ? (
+      <Tooltip label={clickTxt[count]} withArrow disabled={count === 0}>
         <Button
           variant="solid"
           m="2.5rem 5rem"
@@ -32,18 +42,7 @@ function ClickityBtn() {
         >
           Go Ahead
         </Button>
-      ) : (
-        <Tooltip label={clickTxt[count]} withArrow>
-          <Button
-            variant="solid"
-            m="2.5rem 5rem"
-            size="md"
-            onClick={handlers.increment}
-          >
-            Go Ahead
-          </Button>
-        </Tooltip>
-      )}
+      </Tooltip>
     </div>
   );
 }
