@@ -1,5 +1,5 @@
 import ErrorPage from "./error-page";
-import Smth from "../components/About/Smth";
+import About from "../components/About/About";
 import App from "../App";
 
 const links = [
@@ -9,8 +9,8 @@ const links = [
     errorElement: <ErrorPage />,
   },
   {
-    path: "about/:aboutId",
-    element: <Smth />,
+    path: "about/",
+    element: <About />,
   },
 ];
 
