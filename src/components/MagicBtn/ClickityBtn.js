@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Tooltip, Button } from "@mantine/core";
 import { useCounter } from "@mantine/hooks";
 
@@ -20,16 +20,16 @@ function ClickityBtn() {
   ];
 
   const [count, handlers] = useCounter(0, { min: 0, max: clickTxt.length - 1 });
-  const [timeoutId, setTimeoutId] = useState(null);
+  // const [timeoutId, setTimeoutId] = useState(null);
 
-  useEffect(() => {
-    if (count > 0) {
-      const t = setTimeout(handlers.reset, 1000);
-      setTimeoutId(t);
-    }
+  // useEffect(() => {
+  //   if (count > 0) {
+  //     const t = setTimeout(handlers.reset, 1000);
+  //     setTimeoutId(t);
+  //   }
 
-    return () => clearTimeout(timeoutId);
-  }, [count, handlers.reset]);
+  //   return () => clearTimeout(timeoutId);
+  // }, [count, handlers.reset]);
 
   return (
     <div>
