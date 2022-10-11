@@ -9,15 +9,16 @@ export default function ErrorPage(){
 
  const useStyles = createStyles({
     main:{
-        width: "100vw",
-        height:"100vh"
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center",
     }
  });
 
  const {classes} = useStyles(); 
 
     return(
-        <Stack  className={classes.main} align="center" dir="column" spacing="xl" p={8} m={8}>
+        <Stack  className={classes.main} align="center" dir="column" spacing="xl" p={8} m={128}>
             <Title order={1}>Oops</Title>
             <Text>Sorry, An unexpected error occured.</Text>
             <Text italic color="dimmed">{error.statusText || error.message}</Text>
