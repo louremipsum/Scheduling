@@ -3,17 +3,7 @@ import { createStyles, Group, Text } from "@mantine/core";
 import { ReactComponent as YourSvg } from "./logoimg.svg";
 
 function Logo(c) {
-  const useStyles = createStyles((theme) => ({
-    txt: {
-      background: `-webkit-linear-gradient(${theme.colors.primary[c.c1]}, ${
-        theme.colors.primary[c.c2]
-      })`,
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-    },
-  }));
-
-  const { classes } = useStyles();
+  const { classes } = useStyles({ c });
 
   return (
     <Group justify="space-around" align="center" dir="row">
@@ -34,3 +24,13 @@ function Logo(c) {
 }
 
 export default Logo;
+
+const useStyles = createStyles((theme, { c }) => ({
+  txt: {
+    background: `-webkit-linear-gradient(${theme.colors.primary[c.c1]}, ${
+      theme.colors.primary[c.c2]
+    })`,
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  },
+}));
