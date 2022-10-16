@@ -23,8 +23,8 @@ function Navbar() {
 
   const { classes } = useStyles();
   const color = {
-    c1: 5,
-    c2: 8,
+    c2: 5,
+    c1: 8,
   };
 
   return (

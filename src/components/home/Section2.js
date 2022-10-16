@@ -17,7 +17,7 @@ import {
   HiClipboardCheck,
   HiTrash,
 } from "react-icons/hi";
-import getContrastGradient from "../YIQ";
+import getContrastGradient from "../specialFunc/YIQ";
 
 function Section2() {
   const [currentText, setText] = useState("");
