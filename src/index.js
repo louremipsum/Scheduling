@@ -4,13 +4,27 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import links from "./routes/routes";
+import { MantineProvider } from "@mantine/core";
+import { PrimaryColors } from "./App";
 
 const router = createBrowserRouter(links);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <MantineProvider
+      theme={{
+        colors: {
+          primary: PrimaryColors,
+        },
+        fontFamily: "Greycliff CF, sans-serif",
+        primaryColor: "primary",
+      }}
+      withGlobalStyles
+      withNormalizeCSS
+    >
+      <RouterProvider router={router} />
+    </MantineProvider>
   </React.StrictMode>
 );
 
