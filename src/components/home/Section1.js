@@ -9,16 +9,6 @@ import {
 } from "@mantine/core";
 
 function Section1() {
-  const useStyles = createStyles(() => ({
-    head: {
-      display: "flex",
-      justifyContent: "space-around",
-      padding: "1.5rem",
-      margin: "2rem",
-      alignItems: "center",
-    },
-  }));
-
   const { classes } = useStyles();
 
   return (
@@ -51,3 +41,13 @@ function Section1() {
 }
 
 export default Section1;
+
+const useStyles = createStyles(() => ({
+  head: {
+    display: "flex",
+    justifyContent: "space-around",
+    padding: "1.5rem",
+    margin: "2rem",
+    alignItems: "center",
+  },
+}));

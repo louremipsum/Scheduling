@@ -11,25 +11,6 @@ import ScrollTop from "./MagicBtn/ScrollTop.js";
 
 function Face() {
   const [isLoading, setisLoaded] = useState(false);
-
-  const useStyles = createStyles(() => ({
-    bg: {
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-      height: "100vh",
-      transition: "opacity 400ms ease 0ms",
-    },
-    thumb: {
-      filter: "blur(20px)",
-      transform: "scale(1.1)",
-      transition: "visibility 0ms ease 400ms",
-    },
-    full: {
-      transition: "opacity 400ms ease 0ms",
-    },
-  }));
-
   const { classes } = useStyles();
   return (
     <>
@@ -64,3 +45,21 @@ function Face() {
 }
 
 export default Face;
+
+const useStyles = createStyles(() => ({
+  bg: {
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    height: "100vh",
+    transition: "opacity 400ms ease 0ms",
+  },
+  thumb: {
+    filter: "blur(20px)",
+    transform: "scale(1.1)",
+    transition: "visibility 0ms ease 400ms",
+  },
+  full: {
+    transition: "opacity 400ms ease 0ms",
+  },
+}));

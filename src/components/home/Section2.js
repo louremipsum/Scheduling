@@ -23,48 +23,9 @@ function Section2() {
   const [currentText, setText] = useState("");
   const [currentColor1, setColor1] = useState("#FFFFFF");
   const [currentColor2, setColor2] = useState("#FFFFFF");
-  //   const data = value.trim().length > 0 ? value : [];
   const textColor = getContrastGradient(currentColor1, currentColor2);
 
-  const useStyles = createStyles(() => ({
-    box: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      padding: "1rem",
-      margin: "1rem",
-      width: "22rem",
-      borderRadius: "8px",
-    },
-    dis: {
-      maxWidth: "20rem",
-    },
-    disPaper: {
-      maxWidth: "20rem",
-      wordWrap: "break-word",
-      borderRadius: "8px",
-    },
-    main: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-around",
-      padding: "0.5rem",
-      margin: "2rem",
-    },
-    color: {
-      /*       display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      flexDirection: "row", */
-      padding: "1rem",
-      margin: "1rem",
-      width: "22rem",
-      borderRadius: "8px",
-      background: `linear-gradient(90deg, ${currentColor1} 34%, ${currentColor2} 81%);`,
-    },
-  }));
-
-  const { classes } = useStyles();
+  const { classes } = useStyles({ currentColor1, currentColor2 });
 
   return (
     <SimpleGrid cols={2} className={classes.main}>
@@ -147,3 +108,37 @@ function Section2() {
 }
 
 export default Section2;
+
+const useStyles = createStyles((currentColor1, currentColor2) => ({
+  box: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: "1rem",
+    margin: "1rem",
+    width: "22rem",
+    borderRadius: "8px",
+  },
+  dis: {
+    maxWidth: "20rem",
+  },
+  disPaper: {
+    maxWidth: "20rem",
+    wordWrap: "break-word",
+    borderRadius: "8px",
+  },
+  main: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-around",
+    padding: "0.5rem",
+    margin: "2rem",
+  },
+  color: {
+    padding: "1rem",
+    margin: "1rem",
+    width: "22rem",
+    borderRadius: "8px",
+    background: `linear-gradient(90deg, ${currentColor1} 34%, ${currentColor2} 81%);`,
+  },
+}));

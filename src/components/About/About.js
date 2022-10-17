@@ -1,6 +1,7 @@
 import { Stack, Text } from "@mantine/core";
 import React from "react";
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 function About() {
   return (
@@ -16,6 +17,7 @@ function About() {
         accessable to all and learning new things and coding in general with a
         love for problem solving and pattern spotting.
       </Text>
+      <Footer />
     </Stack>
   );
 }

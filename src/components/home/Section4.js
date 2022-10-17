@@ -4,15 +4,6 @@ import Cardobj from "./Cardobj";
 import { RiGithubFill, RiTwitterFill } from "react-icons/ri";
 
 function Section4() {
-  const useStyles = createStyles(() => ({
-    main: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-around",
-      padding: "0.5rem",
-      margin: "1rem",
-    },
-  }));
   const { classes } = useStyles();
   const data = [
     {
@@ -61,3 +52,13 @@ function Section4() {
 }
 
 export default Section4;
+
+const useStyles = createStyles(() => ({
+  main: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-around",
+    padding: "0.5rem",
+    margin: "1rem",
+  },
+}));

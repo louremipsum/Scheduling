@@ -11,24 +11,6 @@ function Section3() {
     { value: 100, label: "xl" },
   ];
 
-  const useStyles = createStyles((theme) => ({
-    main: {
-      display: "flex",
-      flexDirection: "column",
-      padding: "0.5rem",
-      margin: "1rem",
-
-      justifyContent: "center",
-      alignItems: "center",
-    },
-    slider: {
-      padding: "0.5rem",
-      margin: "1rem",
-      color: theme.primaryColor[5],
-      width: "50%",
-    },
-  }));
-
   const { classes } = useStyles();
   return (
     <div className={classes.main}>
@@ -49,3 +31,21 @@ function Section3() {
 }
 
 export default Section3;
+
+const useStyles = createStyles((theme) => ({
+  main: {
+    display: "flex",
+    flexDirection: "column",
+    padding: "0.5rem",
+    margin: "1rem",
+
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  slider: {
+    padding: "0.5rem",
+    margin: "1rem",
+    color: theme.primaryColor[5],
+    width: "50%",
+  },
+}));

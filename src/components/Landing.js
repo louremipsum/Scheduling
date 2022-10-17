@@ -3,24 +3,6 @@ import React from "react";
 import ClickityBtn from "./MagicBtn/ClickityBtn";
 
 function Landing() {
-  const useStyles = createStyles((theme) => ({
-    main: {
-      margin: "0 5rem 0 5rem",
-      fontFamily: "Greycliff CF, sans-serif",
-      align: "center",
-      color: theme.colors.primary[9],
-      weight: "700",
-      fontSize: "3.5rem",
-    },
-    sub: {
-      margin: "0 5rem",
-      fontFamily: "Greycliff CF, sans-serif",
-      align: "center",
-      color: theme.colors.primary[6],
-      weight: "400",
-      fontSize: "2rem",
-    },
-  }));
   const { classes } = useStyles();
   return (
     <Group spacing="lg" mb={"md"} ml="md" mr={"md"}>
@@ -40,3 +22,22 @@ function Landing() {
 }
 
 export default Landing;
+
+const useStyles = createStyles((theme) => ({
+  main: {
+    margin: "0 5rem 0 5rem",
+    fontFamily: "Greycliff CF, sans-serif",
+    align: "center",
+    color: theme.colors.primary[9],
+    weight: "700",
+    fontSize: "3.5rem",
+  },
+  sub: {
+    margin: "0 5rem",
+    fontFamily: "Greycliff CF, sans-serif",
+    align: "center",
+    color: theme.colors.primary[6],
+    weight: "400",
+    fontSize: "2rem",
+  },
+}));
