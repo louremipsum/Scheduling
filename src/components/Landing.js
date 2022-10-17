@@ -23,7 +23,7 @@ function Landing() {
   }));
   const { classes } = useStyles();
   return (
-    <Group spacing="lg" m="md">
+    <Group spacing="lg" mb={"md"} ml="md" mr={"md"}>
       <div>
         <Image
           src="https://user-images.githubusercontent.com/72456774/192103729-9470f9cd-a4c4-44a9-887c-006fbf5bb6bf.png"

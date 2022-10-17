@@ -5,7 +5,7 @@ import Navlink from "./Navlink";
 import Log from "./Log";
 
 function Navbar() {
-  const useStyles = createStyles((_params) => ({
+  const useStyles = createStyles(() => ({
     nav: {
       display: "flex",
       alignItems: "center",
