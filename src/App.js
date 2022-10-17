@@ -1,8 +1,6 @@
 import Face from "./components/Face.js";
 
-import { MantineProvider } from "@mantine/core";
-
-const PrimaryColors = [
+export const PrimaryColors = [
   "#f9edf8",
   "#e1d0df",
   "#ccb2c7",
@@ -16,19 +14,5 @@ const PrimaryColors = [
 ];
 
 export default function App() {
-  return (
-    <MantineProvider
-      theme={{
-        colors: {
-          primary: PrimaryColors,
-        },
-        fontFamily: "Greycliff CF, sans-serif",
-        primaryColor: "primary",
-      }}
-      withGlobalStyles
-      withNormalizeCSS
-    >
-      <Face />
-    </MantineProvider>
-  );
+  return <Face />;
 }
