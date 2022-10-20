@@ -13,7 +13,7 @@ function Face() {
   const [isLoading, setisLoaded] = useState(false);
   const { classes } = useStyles();
   return (
-    <>
+    <div className={classes.main}>
       <Navbar />
       {/* <BackgroundImage
         className={classes.thumb}
@@ -40,7 +40,7 @@ function Face() {
       <Section4 />
       <Footer />
       <ScrollTop />
-    </>
+    </div>
   );
 }
 
@@ -61,5 +61,11 @@ const useStyles = createStyles(() => ({
   },
   full: {
     transition: "opacity 400ms ease 0ms",
+  },
+  main: {
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
+    margin: 0,
   },
 }));
